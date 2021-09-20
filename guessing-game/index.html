@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guessing Game</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="top">
+        <h1>Guessing Game</h1>
+        <h2>Guess a Number Between 1 and 5</h2>
+    </div>
+    <div class="middle">
+        <div class="middle-left">
+            <h3>Tries Left</h3>
+            <p id="triesDisplay">5</p>
+        </div>
+        <div class="middle-right">
+            <p>Input a Number between 1 and 5</p>
+            <input type="text" id="textfield">
+            <button onclick="submitGuess(textfield, errorText, this)">Submit</button>
+            <p id="errorText"></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Work by <a href="C:\myhub\Frontend\mywork\personal website\index.html" target="_blank">Ali Shazin</a></p>
+        <div class="social-media">
+            <a href="https://github.com/alishazin" target="_blank"><i class="bi bi-github"></i></a>
+            <a><i class="bi bi-linkedin"></i></a>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            const tag = document.createElement("script");
+            tag.src = "script.js";
+            document.body.appendChild(tag);
+        }
+    </script>
+</body>
+</html>

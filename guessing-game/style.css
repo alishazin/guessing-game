@@ -1,0 +1,196 @@
+:root {
+    --primary: #2e2e2e;
+    --primary-hover: black;
+    --secondary: #ffe942;
+    --secondary-hover: #dfc500;
+    --shadow: rgb(53, 53, 53);
+    --text-color: black;
+    --body-color: gainsboro;
+    --margin-px: 15px;
+    --button-color: #ff7f50;
+    --button-color-hover: #ff4400;
+}
+.body {
+    padding: 10px;
+    background-color: var(--body-color);
+    box-sizing: border-box;
+}
+.top {
+    height: 400px;
+    background-color: var(--primary);  
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+    flex-direction: column; 
+    align-items: center;
+    box-shadow: 0 0 15px var(--shadow);
+    max-width: 1000px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.top h1 {
+    font-family: Arial;
+    font-size: 50px;
+    color: var(--secondary);
+}
+.top h2 {
+    font-family: Arial;
+    font-size: 20px;
+    background-color: var(--secondary);
+    padding: 20px 30px;
+    color: var(--text-color);
+    border-radius: 20px;
+}
+.middle { 
+    max-width: 1000px;
+    margin: var(--margin-px) auto;
+    display: flex;
+    height: 250px;
+    box-sizing: border-box;
+}
+.middle-left {
+    height: 250px;
+    background-color: var(--secondary);  
+    padding: 30px 0;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 0 15px var(--shadow);
+    flex-basis: 25%;
+    min-width: 200px;
+    margin-right: var(--margin-px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.middle-right {
+    height: 250px;
+    background-color: var(--primary);  
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 0 15px var(--shadow);
+    flex-basis: 75%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.middle-left h3 {
+    font-family: Arial;
+    font-size: 30px;
+    margin: 0;
+}
+.middle-left p {
+    font-family: Arial;
+    font-size: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 20px 30px;
+    transition: box-shadow 0.5s, background-color 0.5s;
+}
+.middle-left p:hover {
+    box-shadow: 0 0 20px var(--shadow);
+    background-color: var(--primary-hover);
+}
+.middle-right p:first-child {
+    color: var(--secondary);
+    font-family: Arial;
+    font-size: 20px;
+}
+.middle-right input {
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 15px;
+    outline: none;
+    box-shadow: inset 1px 1px 2px var(--shadow);
+    width: 50%;
+}
+.middle-right input:focus {
+    box-shadow: inset 1px 1px 4px var(--shadow);
+}
+.middle-right button {
+    padding: 15px 20px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 0 9px 0 #ddd;
+    border-radius: 15px;
+    background-color: var(--button-color);
+    color: var(--primary);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.middle-right button:hover {
+    background-color: var(--button-color-hover) !important;
+}
+.middle-right button:active {
+    box-shadow: 0 5px 0 #ddd;
+    transform: translateY(4px);
+}
+.middle-right p:last-child {
+    transform: translateY(10px);
+    font-size: 17px;
+    color: red;
+}
+.footer {
+    height: 180px;
+    background-color: var(--primary);  
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 15px var(--shadow);
+    max-width: 1000px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.footer p {
+    font-family: "Sofia";
+    color: var(--secondary);
+    font-size: 20px;
+    text-align: center;
+}
+.footer p a {
+    font-family: Arial;
+    text-decoration: underline;
+    color: var(--secondary);
+    transition: color 0.2s;
+}
+.footer p a:hover {
+    color: var(--secondary-hover);
+}
+.footer .social-media {
+    display: flex;
+    justify-content: center;
+}
+.footer .social-media a i {
+    color: gainsboro;
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.footer .social-media a i:hover {
+    color: white;
+}
+@media (max-width:600px) {
+    .top h1 {
+        font-size: 10vw;
+    }
+    .top h2 {
+        font-size: 3.5vw;
+    }
+    .middle {
+        flex-direction: column;
+        height: 500px;
+    }
+    .middle-left {
+        padding: 40px 0;
+        margin-right: 0;
+        margin-bottom: var(--margin-px);
+    }
+    .top, .middle-left, .middle-right, .footer {
+        border-radius: 20px;
+    }
+}
